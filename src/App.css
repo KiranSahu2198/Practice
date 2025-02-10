@@ -1,0 +1,21 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.searchBox{
+  width: 500px;
+  border-radius: 3px;
+  height: 30px;
+}
+.searchContainer{
+  width: 500px;
+  border: 1px solid #bbb;
+}
+span{
+  display: block;
+  text-align: left;
+  padding: 1px 10px;
+}
