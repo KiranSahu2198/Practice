@@ -31,7 +31,7 @@ export default function Pagination() {
         {[...Array(totalPages).keys()].map(e => 
             <button key={e+1} 
             onClick={() => setCurrentPage(e+1)}
-            // active={true}
+            className="active"
             >{e+1}</button>)}
         <button 
             onClick={() => setCurrentPage(pre => pre + 1)}

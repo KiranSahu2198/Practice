@@ -7,3 +7,6 @@ button:hover{
 .pageNums{
     width: 100%;
 }
+.active{
+    background-color: aqua;
+}
