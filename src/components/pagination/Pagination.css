@@ -4,8 +4,14 @@ button{
 button:hover{
     background-color: aquamarine;
 }
+button:disabled{
+    background-color: #ccc;
+}
 .pageNums{
     width: 100%;
+    position: fixed;
+    top:20px;
+    right:20px;
 }
 .active{
     background-color: aqua;
