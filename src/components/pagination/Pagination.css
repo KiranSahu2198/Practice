@@ -1,6 +1,9 @@
 button{
-    background-color: red;
+    background-color: #ccc;
 }
-button:active{
-    background-color: blue;
+button:hover{
+    background-color: aquamarine;
+}
+.pageNums{
+    width: 100%;
 }

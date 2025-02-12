@@ -16,19 +16,27 @@ export default function Pagination() {
     useEffect(() => {
         fetchData()
     },[]);
-
+    {console.log(currentPage)}
     const totalPages = Math.ceil(data.length/LIST_COUNT);
     const start = (currentPage-1)*LIST_COUNT;
     const end = start + LIST_COUNT;
-    {console.log(Array(totalPages))}
+    
 
     return(<>
-    <div>
-    {[...Array(totalPages).keys()].map(e => 
-    <button key={e+1} 
-    onClick={() => setCurrentPage(e+1)}
-    active={true}
-    >{e+1}</button>)}
+    <div className="pageNums">
+        <button 
+            onClick = {() => setCurrentPage(pre => pre - 1)}
+            disabled = {currentPage === 1}
+        >{"<"}</button>
+        {[...Array(totalPages).keys()].map(e => 
+            <button key={e+1} 
+            onClick={() => setCurrentPage(e+1)}
+            // active={true}
+            >{e+1}</button>)}
+        <button 
+            onClick={() => setCurrentPage(pre => pre + 1)}
+            disabled = {currentPage === totalPages}
+        >{">"}</button>
     </div>
     <ol>
         {console.log(start, end)}
