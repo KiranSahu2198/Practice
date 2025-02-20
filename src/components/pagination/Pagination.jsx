@@ -39,7 +39,6 @@ export default function Pagination() {
         >{">"}</button>
     </div>
     <ol>
-        {console.log(start, end)}
         {data.slice(start, end).map(e => <li key={e.id}>{e.email}</li>)}
     </ol>
         
