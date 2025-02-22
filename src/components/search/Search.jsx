@@ -21,8 +21,6 @@ function Search() {
     try{
       const response = await fetch('https://dummyjson.com/users/search?q=' + text);
       const users = await response.json();
-      console.log('featched', text);
-    
       setData(users?.users);
       setCache((prev) => ({...prev, [text]: users?.users}));
       localStorage.setItem("locStorage", JSON.stringify(cache));
@@ -53,7 +51,7 @@ function Search() {
       onBlur={() => setShowSearch(false)}
        />
       {(showSearch) && (<div className='searchContainer'>
-        {data.map(e => <span key={e.id}>{e.firstName + " " + e.lastName}</span>)}
+        {data.length > 0 ? data.map(e => <span key={e.id}>{e.firstName + " " + e.lastName}</span>) : <span class="error">Data not found</span>}
       </div>)}
     </>
   )

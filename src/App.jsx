@@ -1,14 +1,13 @@
-import { useState, useEffect } from 'react'
 import './App.css'
-import Search from './components/Search/Search'
-import Pagination from './components/pagination/Pagination'
+import Home from './components/home/home'
+
 
 function App() {
  
   return (
     <>
-      {/* <Search /> */}
-      <Pagination />
+      <Home />
+      
     </>
   )
 }

@@ -9,9 +9,9 @@ button:disabled{
 }
 .pageNums{
     width: 100%;
-    position: fixed;
-    top:20px;
-    right:20px;
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 .active{
     background-color: aqua;
