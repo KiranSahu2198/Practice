@@ -1,8 +1,9 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router'
 import Search from '../search/Search'
 import Pagination from '../pagination/Pagination'
 import FeatchDeleteItem from '../featchDeleteItem/featchDeleteItem'
 import Header from '../header/header'
-import { BrowserRouter as Router, Routes, Route } from 'react-router'
+import Counter from '../counter/counter'
 
 const Home = () => {
     return(<Router>
@@ -12,6 +13,7 @@ const Home = () => {
         <Route path='/Search' element={<Search />} />
         <Route path='/Pagination' element={<Pagination />} />
         <Route path='/FeatchDeleteItem' element={<FeatchDeleteItem />} />
+        <Route path='/Counter' element={<Counter />} />
       </Routes>
     </Router>)
 }
