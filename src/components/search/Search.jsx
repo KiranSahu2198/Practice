@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import './Search.css'
 
 function Search() {
@@ -34,7 +34,7 @@ function Search() {
     const timer = setTimeout(() => {
       fetchData();
       console.log('render');
-    }, 500);
+    }, 2500);
     
     return () => {
       clearTimeout(timer);
@@ -48,10 +48,12 @@ function Search() {
       type='text' 
       onChange={(e) => setText(e.target.value)} 
       onFocus={() => setShowSearch(true)}
-      onBlur={() => setShowSearch(false)}
+      // onBlur={() => setShowSearch(false)}
        />
       {(showSearch) && (<div className='searchContainer'>
-        {data.length > 0 ? data.map(e => <span key={e.id}>{e.firstName + " " + e.lastName}</span>) : <span class="error">Data not found</span>}
+        <Suspense fallback={<h3> Loading ... </h3>}>
+          {data.length > 0 ? data.map(e => <span key={e.id} onClick={() => {setText(e.firstName); console.log(text)}} >{e.firstName + " " + e.lastName}</span>) : <span className="error">Data not found</span>}
+        </Suspense>
       </div>)}
     </>
   )
