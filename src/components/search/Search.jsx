@@ -48,7 +48,7 @@ function Search() {
       type='text' 
       onChange={(e) => setText(e.target.value)} 
       onFocus={() => setShowSearch(true)}
-      // onBlur={() => setShowSearch(false)}
+      onBlur={() => setShowSearch(false)}
        />
       {(showSearch) && (<div className='searchContainer'>
         <Suspense fallback={<h3> Loading ... </h3>}>
