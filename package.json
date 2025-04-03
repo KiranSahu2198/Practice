@@ -1,7 +1,11 @@
 {
-  "name": "react-app",
-  "private": true,
-  "version": "0.0.0",
+  "package-name": "kiran-practice-app",
+  "git repository": "https://github.com/KiranSahu2198/Practice",
+  "author": "Kiran",
+  "license": "ISC",
+  "name": "kiran-practice-app",
+  "private": false,
+  "version": "2.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
